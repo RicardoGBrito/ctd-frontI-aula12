@@ -5,13 +5,196 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesa de trabalho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+
     <style type="text/css">
         /* Adicione o código fonte de estilização */
+        .formulario{
+            font-family: 'Open Sans', sans-serif;
+            
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+        }
 
+        #label1{
+            display: block;
+            padding-bottom: 15px;
+        }
+
+        .form_label{
+            
+            color: rgba(0, 0, 0, 0.61);
+        }
+
+        input{
+            width:80px;
+            border: 1px solid rgba(0, 0, 0, 0.137);
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 15px;
+
+        }
+        #local{
+            width:250px;
+            margin-top: 20px;
+        }
+        
+        .alinhar{
+            float:left;
+            margin-right: 50px;
+        }
+
+        .separar{
+            border-top: 1px solid rgba(0, 0, 0, 0.137);
+            margin-top: 40px;
+            padding-top: 10px;
+        }
+
+        p{
+            color:rgba(0, 0, 0, 0.377);
+            font-size: 14px;
+            position:relative;
+            bottom:10px;
+            left:5px;
+            
+        }
+        h3{
+            color: rgba(0, 0, 0, 0.658);
+            font-size:15px;
+            
+        }
+
+        #car{
+            margin-top:40px;
+        }
+        .ajusteFino{
+            
+            width:20px;
+            margin-top:10px;
+            
+        }
+
+        .afastamento{
+            position: relative;
+            left: 70px;
+        }
+        button{
+            width:100px;
+            position: relative;
+            left:100px;
+            top: 15px;
+            border-radius: 10px;
+            background-color:rgb(196, 228, 255);
+        }
     </style>
 </head>
 <body>
     <!-- Adicione o código fonte da estrutura HTML -->
 
+    <form action="" class="formulario" method="get">
+        <div>
+            
+            <label id="label1" for="local" class="form_label"></label><h3>Localização</h3></label>
+            <p><input type="text" id="local" name="localização" required placeholder="Digite seu estado ou cidade"></p>
+            
+        
+        </div>
+        <div class="separar">
+            <h3>Ofertas</h3>
+            <input class="ajusteFino" type="checkbox" id="ofertas" name="ofertas">
+            <label for="ofertas" class="form_label">Black feirao</label>
+        </div>
+        <div class="separar">
+            <h3>O que é interessante para você?</h3>
+            <div>
+                <input class="ajusteFino" type="checkbox" id="preco" name="ofertas"> 
+                <label for="preco" class="form_label">Super Preço</label>
+            </div>
+            <div>
+                <input class="ajusteFino" type="checkbox" id="delivery" name="ofertas">
+                <label for="delivery" class="form_label">Car Delivery</label>
+            </div>
+            <div>
+                <input class="ajusteFino" type="checkbox" id="troca" name="ofertas">
+                <label for="troca" class="form_label">Troca + Troco</label>
+            </div>
+                                  
+        </div>
+        <div>
+            <h3 id="car">Carros</h3>
+            <input class="ajusteFino" type="checkbox" id="novo" name="carros">
+            <label for="novo" class="form_label">Novos</label>
+            <input class="ajusteFino afastamento" type="checkbox" id="usado" name="carros">
+            <label for="usado" class="form_label afastamento">Usados</label>
+           
+         </div>
+        <div class="separar">
+            <h3>Ano</h3>
+            <div class="alinhar">
+            <input type="text" name="ano" placeholder="de">
+            <p>ex.: 2014</p>
+            </div>
+            <div>
+            <input type="text" name="ano" placeholder="até">
+            <p>ex.: 2019</p>
+            </div>
+        </div>
+        <div class="separar">
+            <h3>Preço</h3>
+            <div class="alinhar">
+                <input type="text" id="de" name="de" placeholder="de">
+                <p>ex.: 20.000</p>
+            </div>
+            <div>
+                <input type="text" id="ate" name="ate" placeholder="até">
+                <p>ex.: 50.000</p>
+            </div>
+        </div>
+
+        <div class="separar">
+            <h3>Quilometragem</h3>
+            <div class="alinhar">
+                <input type="text" name="quilometragem" placeholder="de">
+                <p>ex.: 10.000</p>
+            </div>
+            <div>
+                <input type="text" name="quilometragem" placeholder="até">
+                <p>ex.: 50.000</p>
+            </div>
+        </div>
+           
+        <div class="separar">
+            <h3>Vendedor</h3>
+            <div>
+                <input class="ajusteFino" type="checkbox" id="autos" name="vendedor">
+                <label for="autos" class="form_label">Acessórios e Serviços para autos</label>
+            </div>
+            <div>
+                <input class="ajusteFino" type="checkbox" id="concessionaria" name="vendedor">
+                <label for="concessionaria" class="form_label">Concessionária</label>
+            </div>
+            <div>
+            
+                <input class="ajusteFino" type="checkbox" id="loja" name="vendedor">
+                <label for="loja" class="form_label">Loja</label>
+            </div>
+            <div>
+
+                <input class="ajusteFino" type="checkbox" id="montadora" name="vendedor">
+                <label for="montadora" class="form_label">Montadora</label>
+            </div>
+            <div>
+                
+                <input class="ajusteFino" type="checkbox" id="pessoa" name="vendedor">
+                <label for="pessoa" class="form_label">Pessoa física</label>
+            </div>
+         </div>
+         <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
